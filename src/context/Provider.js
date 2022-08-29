@@ -20,14 +20,12 @@ const AuthProvider = props => {
       })
     }
   
-    let signout = callback => {
-      return fakeAuthProvider.signout(() => {
-        setUser(null)
-        localStorage.removeItem('appToken')
-        localStorage.removeItem('loginDetails')
-        callback()
-      })
-    }
+    let signout = (callback) => {
+      setUser(null);
+      localStorage.removeItem("loginDetails");
+      localStorage.removeItem("appToken");
+      return callback();
+    };
   
     let value = { user, signin, signout }
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

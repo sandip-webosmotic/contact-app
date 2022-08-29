@@ -92,7 +92,6 @@ function Home() {
         getUsers[index].contacts = contactArray;
         getUsers.push();
         localStorage.setItem("users", JSON.stringify(getUsers));
-        e.target.reset();
       }
     }
   };

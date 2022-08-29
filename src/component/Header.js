@@ -20,7 +20,7 @@ function Header() {
                         </li>
                     </ul>
                     <form className="d-flex">
-                            <button className="btn btn-outline-success" onClick={() => {auth.signout(() => navigate('/'))}}>Logout</button>
+                            <button className="btn btn-outline-success" onClick={() => {auth.signout(() => {navigate('/')})}}>Logout</button>
                     </form>
                 </div>
             </div>
